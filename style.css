@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Montserrat:wght@500&family=Poppins:ital,wght@0,400;0,500;0,900;1,600&family=Red+Hat+Display:ital,wght@0,600;1,400&family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: url(./img/background.jpg) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 40%;
+    color: white;
+    font-family: 'Poppins';
+}   
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0.5em;
+}
+
+.drag-container {
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+ /* Columns  */
+.drag-container .drag-list {
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.drag-container .drag-column {
+    flex: 1;
+    margin: 0 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow-x: hidden;
+    padding: 0.5em ;
+}
+
+.drag-column .header {
+    text-align: center;
+}
+
+.todo-column .header,
+.todo-column .solid,
+.todo-column .solid:hover,
+.todo-column .over {
+  background-color: rgb(209, 27, 27);
+}
+
+.progress-column .header,
+.progress-column .solid,
+.progress-column .solid:hover,
+.progress-column .over {
+  background-color: rgba(236, 129, 6, 0.89);
+}
+
+.done-column .header,
+.done-column .solid,
+.done-column .solid:hover,
+.done-column .over {
+  background-color: rgb(67, 182, 44);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    padding: .4em .7em;
+    margin: 10px;
+  }
+  
+.header h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+ /* Drag items */
+.drag-item {
+    margin: 10px;
+    padding: 10px;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 10px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    list-style: none;
+}
+.drag-item:hover {
+    cursor: move;
+}
+
+
+ /* Add button group  */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 5px;
+    transition: all 0.3s ease-in;
+    user-select: none;
+}
+
+.add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.solid {
+    display: none;
+}
+
+.plus-sign {
+    font-size: 1.3rem;
+    margin-right: 5px;
+    position: relative;
+}
+
+.add-container {
+    margin: 10px;
+    padding: 8px;
+    min-height: 60px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+}
+
+.add-item {
+    width: 100%;
+    min-height: 60px;
+    height: auto;
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: .7rem;
+    font-family: 'Poppins';
+}
+
+.add-item:focus {
+    outline: none;
+}
