@@ -86,6 +86,12 @@ body {
 }
 
  /* Drag items */
+
+ .drag-item-list {
+     padding-bottom: 5px;
+ }
+
+
 .drag-item {
     margin: 10px;
     padding: 10px;
@@ -97,11 +103,18 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
+
+
 .drag-item:hover {
     cursor: move;
 }
 
+.over {
+    padding: 50px 10px;
+}
 
  /* Add button group  */
 
@@ -119,17 +132,19 @@ body {
     cursor: pointer;
     width: fit-content;
     border-radius: 5px;
-    transition: all 0.3s ease-in;
+    transition: all 0.1s ease-in;
     user-select: none;
 }
 
 .add-btn:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    /* background-color: rgba(255, 255, 255, 0.9); */
     color: black;
+    font-weight: 500;
 }
 
 .solid {
     display: none;
+    float: left;
 }
 
 .plus-sign {
@@ -139,6 +154,7 @@ body {
 }
 
 .add-container {
+    display: none;
     margin: 10px;
     padding: 8px;
     min-height: 60px;
@@ -153,8 +169,9 @@ body {
     resize: none;
     padding: 10px;
     border-radius: 10px;
-    font-size: .7rem;
+    font-size: 1rem;
     font-family: 'Poppins';
+    color: black;
 }
 
 .add-item:focus {

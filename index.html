@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Kanban Board</title>
 </head>
@@ -18,23 +19,23 @@
                 </span>
                  <!-- Backlog Content  -->
                  <div id="todo-content">
-                     <ul class="drag-item-list" >
-                         <li class="drag-item" draggable="true">Kanban tugatishim kerak</li>
+                     <ul class="drag-item-list" id="todo-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(0)" >
+                         <li class="drag-item" draggable="true">Kanban tugatishim kerak <i class="las la-pen" style="font-size: 24px;"></i> <i class="las la-minus-circle" style="font-size: 24px;"></i></li>
                      </ul>
                  </div>
                  <!-- Add Button group -->
                  <div class="add-btn-group">
                      <div class="buttons">
-                         <div class="add-btn ">
+                         <div class="add-btn" onclick="showAddContainer(0)">
                              <span class="plus-sign">+</span>
                              <span>Add item</span>
                             </div>
-                            <div class="add-btn solid">
+                            <div class="add-btn solid" onclick="hideAddContainer(0)">
                                 <span>Save item</span>
                             </div>
                         </div>
-                     <div class="add-container solid">
-                        <textarea class="add-item" id="" cols="20" rows="10"></textarea>
+                     <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
                      </div>
                  </div>
             </li>
@@ -45,10 +46,23 @@
                 </span>
                  <!-- In Progress Content  -->
                  <div id="progress-content">
-                     <ul class="drag-item-list" >
-                         <li class="drag-item">Test</li>
+                     <ul class="drag-item-list" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(1)" >
                      </ul>
                  </div>
+                 <div class="add-btn-group">
+                    <div class="buttons">
+                        <div class="add-btn"  onclick="showAddContainer(1)">
+                            <span class="plus-sign">+</span>
+                            <span>Add item</span>
+                           </div>
+                           <div class="add-btn solid"  onclick="hideAddContainer(1)">
+                               <span>Save item</span>
+                           </div>
+                       </div>
+                    <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
+                    </div>
+                </div>
             </li>
                 <!-- Done content  -->
             <li class="drag-column done-column">
@@ -57,10 +71,23 @@
                 </span>
                  <!-- Done Content  -->
                  <div id="done-content">
-                     <ul class="drag-item-list" >
-                         <li class="drag-item">Test</li>
+                     <ul class="drag-item-list" id="done-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(2)" >
                      </ul>
                  </div>
+                 <div class="add-btn-group">
+                    <div class="buttons">
+                        <div class="add-btn"  onclick="showAddContainer(2)">
+                            <span class="plus-sign">+</span>
+                            <span>Add item</span>
+                           </div>
+                           <div class="add-btn solid"  onclick="hideAddContainer(2)">
+                               <span>Save item</span>
+                           </div>
+                       </div>
+                    <div class="add-container">
+                        <div class="add-item" contenteditable="true"></div>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
