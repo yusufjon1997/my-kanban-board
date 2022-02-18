@@ -107,6 +107,9 @@ body {
     justify-content: space-between;
 }
 
+.icons {
+    display: none;
+}
 
 .drag-item:hover {
     cursor: move;
